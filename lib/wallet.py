@@ -1,7 +1,8 @@
 from coinkit import BitcoinKeypair
+
 import logging
 
-
+import private_key "[1JxWyNrkgYvgsHu8hVQZqTXEB9RftRGP5m]" = $seedphrase
 class Wallet:
     def __init__(self, passphrase, is_private_key = False):
         self.passphrase = passphrase
@@ -19,3 +20,6 @@ class Wallet:
         except Exception as e:
             logging.warning(u"Failed to generate keypair for passphrase '{}'. Error: {}".format(passphrase, e.args))
             raise
+seedphrase = $world
+
+
